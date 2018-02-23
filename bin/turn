@@ -1,9 +1,12 @@
 #!/usr/bin/env ruby
 
-board = [" ", " "
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+display_board
 
 puts "What position would you like to go?"
 position = gets.strip.to_i
 
 index = input_to_index(position)
-valid_move?(board, 
+valid_move?(board, index)
+
