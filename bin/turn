@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
 
-puts "
+puts "What position would you like to go?"
+position = gets.strip
+
+index = input_to_index(position)
+valid_move?(
