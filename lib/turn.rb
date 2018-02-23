@@ -10,7 +10,9 @@ def move(board, index, tic_or_tac = "X")
   board[index] = tic_or_tac
 end
 
-def position_to_index
+def input_to_index(input)
+  index = input.to_i - 1
+end
 
 def valid_move?(board, index)
   if !position_taken?(board, index) && index.between?(0, 8)
