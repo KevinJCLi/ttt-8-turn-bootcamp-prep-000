@@ -7,7 +7,7 @@ def display_board(board)
 end
 
 def input_to_index(user_input)
-user_input.to_i
+  user_input.to_i
 end
 
 def move(board, index, tic_or_tac = "X")
@@ -15,7 +15,17 @@ def move(board, index, tic_or_tac = "X")
 end
 
 def valid_move?(board, index)
-  if 
+  if !position_taken?(board, index) && index.between?(0, 8)
+    true
+  else
+    false
+  end
+end
     
 def position_taken?(board, index)
-  if board[index] == 
+  if board[index] == "" || board[index] == " " || board[index] == nil
+    false
+  else
+    true
+  end
+end
