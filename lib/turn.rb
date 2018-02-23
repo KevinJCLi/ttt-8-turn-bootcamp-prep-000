@@ -1,12 +1,23 @@
 def display_board(board)
+  LINE = "-----------"
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
-  puts "-----------"
+  puts LINE
   puts " #{board[3]} | #{board[4]} | #{board[5]} "
-  puts "-----------"
+  puts LINE
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-def turn ()
+def turn (board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index)
+  else 
+    turn (board)
+  end
+end
+
 
 def move(board, index, tic_or_tac = "X")
   board[index] = tic_or_tac
