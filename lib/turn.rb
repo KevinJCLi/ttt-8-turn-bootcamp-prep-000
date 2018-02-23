@@ -6,6 +6,8 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+def turn ()
+
 def move(board, index, tic_or_tac = "X")
   board[index] = tic_or_tac
 end
