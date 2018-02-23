@@ -9,4 +9,5 @@ position = gets.strip.to_i
 
 index = input_to_index(position)
 valid_move?(board, index)
-move(
+move(board, index)
+
